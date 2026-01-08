@@ -1,0 +1,465 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Search Products: Easy</title>
+        <meta name="robots" content="noindex, follow" />
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png">
+
+        <!-- CSS
+        ============================================ -->
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/vendor/font-awesome.css">
+        <link rel="stylesheet" href="assets/css/vendor/flaticon/flaticon.css">
+        <link rel="stylesheet" href="assets/css/vendor/slick.css">
+        <link rel="stylesheet" href="assets/css/vendor/slick-theme.css">
+        <link rel="stylesheet" href="assets/css/vendor/jquery-ui.min.css">
+        <link rel="stylesheet" href="assets/css/vendor/sal.css">
+        <link rel="stylesheet" href="assets/css/vendor/magnific-popup.css">
+        <link rel="stylesheet" href="assets/css/vendor/base.css">
+        <link rel="stylesheet" href="assets/css/style.min.css">
+        <link rel="stylesheet" href="assets/css/notification.css">
+
+    </head>
+
+
+    <body class="sticky-header" onload="getDataForSearch(), checkSignedInOrNot()">
+        <!--[if lte IE 9]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+    <![endif]-->
+        <a href="#top" class="back-to-top" id="backto-top"><i class="fal fa-arrow-up"></i></a>
+        <header class="header axil-header header-style-1 bg-dark">
+
+            <div class="axil-header-top bg-dark">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-sm-6">
+                            <div class="header-top-dropdown">
+
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="header-top-link">
+                                <ul class="quick-link">
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Start Mainmenu Area  -->
+            <div id="axil-sticky-placeholder"></div>
+            <div class="axil-mainmenu" style="margin-top: 6px;">
+                <div class="container">
+                    <div class="header-navbar bg-dark" style="height: 60px;">
+                        <div class="header-brand">
+                            <a href="index.html" class="logo logo-dark">
+                                <img src="assets/images/logo/logo.png" alt="Site Logo">
+                            </a>
+                            <a href="index.html" class="logo logo-light">
+                                <img src="assets/images/logo/logo-light.png" alt="Site Logo">
+                            </a>
+                        </div>
+                        <div class="header-main-nav">
+                            <!-- Start Mainmanu Nav -->
+                            <nav class="mainmenu-nav">
+
+                                <ul class="mainmenu">
+                                    <!--                                    
+                                                                    </ul>
+                                                                </nav>
+                                    <!-- End Mainmanu Nav -->
+                                    </div>
+                                    <div class="header-action">
+                                        <ul class="action-list">
+                                            <li class="axil-search">
+                                                <a href="search.html" class="header-search-icon" title="Search">
+                                                    <i class="flaticon-magnifying-glass text-light"></i>
+                                                </a>
+                                            </li>
+                                            <li class="wishlist">
+                                                <a href="#">
+                                                    <i class="fa-light fa-star text-light" style="font-size: 19px"></i>
+                                                </a>
+                                            </li>
+                                            <li class="shopping-cart">
+                                                <a href="cart.html" class="cart-dropdown-btn">
+                                                    <span class="cart-count">3</span>
+                                                    <i class="flaticon-shopping-cart text-light"></i>
+                                                </a>
+                                            </li>
+                                            <li class="my-account">
+                                                <a href="javascript:void(0)">
+                                                    <i class="flaticon-person text-light"></i>
+                                                </a>
+                                                <div class="my-account-dropdown bg-dark-subtle">
+                                                    <span class="title">Navigate To</span>
+                                                    <ul id="header-links-show">
+                                                        <li id="header-links-show-link1">
+                                                            <a href="sign-up.html">Sign Up</a>
+                                                        </li>
+                                                        <li id="header-links-show-link2">
+                                                            <a href="sign-in.html">Log In</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="my-account.html" id="header-links-show-link3">Profile</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="search.html">Search</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="cart.html">Cart</a>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="login-btn">
+                                                        <a id="sign-in-button" href="sign-in.html" class="axil-btn btn-bg-primary">Login</a>
+                                                    </div>
+                                                    <div id="sign-in-div" class="reg-footer text-center">No account yet? <a href="sign-up.html" class="btn-link">REGISTER HERE.</a></div>
+                                                </div>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    <!-- End Mainmenu Area -->
+                                    </header>
+        <!-- End Header -->
+
+        <main class="main-wrapper" style="margin-top: -80px">
+
+
+            <!-- Start Shop Area  -->
+            <div class="axil-shop-area axil-section-gap bg-dark">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <div class="axil-shop-sidebar">
+                                <div class="d-lg-none">
+                                    <button class="sidebar-close filter-close-btn" style="background-color: #7ebc12"><i class="fas fa-times"></i></button>
+                                </div>
+                                <div class="toggle-list product-categories active">
+                                    <h6 class="title text-white-50">Find by Keywords</h6>
+                                    <div class="input-group">
+                                        <div class="col-9">
+                                            <input type="text" class="form-control bg-transparent text-white-50 border border-1 rounded-pill border-light border-opacity-25" style="box-shadow: none" id="search-text" value="" placeholder="Type something">
+                                        </div>
+                                        <div class="col-1 m-4">
+                                            <button onclick="advancedProductSearch(0);" class="form-control text-white-50 border-0 bg-transparent" style="height: 40px; width: 40px; box-shadow: none"><i class="fa-light fa-magnifying-glass" style="font-size: 19px" onmouseover="this.style.color='#7ebc12'" onMouseOut="this.style.color='#8d8d90'"></i></button>
+                                       </div>                                        
+                                    </div>
+                                </div>
+                                <div class="toggle-list product-categories active">
+                                    <h6 class="title text-white-50">Find by Category</h6>
+                                    <div class="shop-submenu">
+                                        <ul id="category-options">
+                                            <!--<li class="current-cat"><a href="#">Apple</a></li>-->
+                                            <li id="category-options-li"><a  id="category-options-a">Apple</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="toggle-list product-categories product-gender active">
+                                    <h6 class="title text-white-50">Find by Condition</h6>
+                                    <div class="shop-submenu">
+                                        <ul id="condition-options">
+                                            <!--<li class="chosen"><a href="#">New</a></li>-->
+                                            <li id="condition-options-li"><a id="condition-options-a"></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="toggle-list product-color active">
+                                    <h6 class="title text-white-50">Find by Color</h6>
+                                    <div class="shop-submenu">
+                                        <ul id="color-options">
+                                            <!--<li class="chosen" style="border-color: red;"><a style="background: red;" href="#" class="color-extra-02"></a></li>-->
+                                            <li id="color-options-li" style="border-color: red;"><a id="color-options-a" style="background: red;" class="color-extra-02"></a></li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                
+                                <div class="toggle-list product-price-range active">
+                                    <h6 class="title text-white-50">By your budget</h6>
+                                    <div class="shop-submenu">
+                                        <form action="#" class="mt--25">
+                                            <div id="slider-range"></div>
+                                            <div class="flex-center mt--20 ">
+                                                <input type="text" id="amount" class="amount-range text-white-50 bg-dark" readonly>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <button class="axil-btn btn-bg-secondary" onclick="advancedProductSearch(0);">Filter Out</button>
+                                <button class="axil-btn btn-bg-primary mt--10" onclick="window.location.reload();">Clean Parameters</button>
+                            </div>
+                            <!-- End .axil-shop-sidebar -->
+                        </div>
+                        <div class="col-lg-9">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="axil-shop-top mb--0">
+                                        <div class="category-select align-items-center justify-content-lg-end justify-content-between" style="margin-top: -20px">
+                                            <!-- Start Single Select  -->
+                                            <span class="filter-results"></span>
+                                            <select class="single-select text-white-50" id="st-sort">
+                                                <option class=" bg-dark">Sort by Latest</option>
+                                                <option class="bg-dark">Sort by Oldest</option>
+                                                <option class=" bg-dark">Sort by Name</option>
+                                                <option class="  bg-dark">Sort by Price</option>
+                                            </select>
+                                            <!-- End Single Select  -->
+                                        </div>
+                                        <div class="d-lg-none">
+                                            <button class="product-filter-mobile filter-toggle text-white-50"><i class="fa-solid fa-filter-list"></i> Filter Parameters</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End .row -->
+                            <div class="row row--15 mt--20" id="st-product-container">
+                                
+                                <div class="col-xl-4 col-sm-6" id="st-product">
+                                    <div class="axil-product product-style-one mb--30">
+                                        <div class="thumbnail">
+                                            <a href="#" id="st-product-a1">
+                                                <img src="assets/images/product/product-01.png" id="st-product-img" alt="Product Images">
+                                            </a>
+
+                                            <div class="product-hover-action">
+                                                <ul class="cart-action">
+                                                    <!--<li class="quickview"><a href="#" id="st-product-a2"><i class="far fa-eye"></i></a></li>-->
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="product-content">
+                                            <div class="inner">
+                                                <h5 class="title"><a href="#" id="st-product-title">Apple iPhone 15 Pro</a></h5>
+                                                <div class="product-price-variant">
+                                                    <span class="price current-price text-secondary">Rs. <span id="st-product-price">350,000.00</span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Single Product  -->
+
+                            </div>
+                            <div id="st-pagination-container" class="text-center pt--20">
+                                <a href="#" id="st-pagination-item" class="axil-btn btn-bg-primary ms-1 me-1" >Prev</a>
+                                <a href="#" class="axil-btn btn-bg-primary">1</a>
+                                <a href="#" class="axil-btn btn-bg-primary">2</a>
+                                <a href="#" class="axil-btn btn-bg-primary">Next</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End .container -->
+            </div>
+            <!-- End Shop Area  -->
+
+
+        </main>
+
+
+        <!-- Start Why Choose Area  -->
+                                    <div class="axil-why-choose-area pb--50 pb_sm--30 bg-dark">
+                                        <div class="container">
+                                            <div class="section-title-wrapper section-title-center">
+                                                <span class="title-highlighter highlighter-secondary"><i class="fa-brands fa-etsy"></i>Why Trading with Easy?</span>
+                                                <h2 class="title text-white-50">We Proudly Offer,</h2>
+                                            </div>
+                                            <div class="row row-cols-xl-5 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1 row--20 justify-content-center">
+                                                <div class="col">
+                                                    <div class="service-box bg-dark border-0">
+                                                        <div class="icon">
+                                                            <img src="./assets/images/icons/service4.png" alt="Service">
+                                                        </div>
+                                                        <h6 class="title text-white-50">Buyer Protection</h6>
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="service-box bg-dark border-0">
+                                                        <div class="icon">
+                                                            <img src="./assets/images/icons/service3.png" alt="Service">
+                                                        </div>
+                                                        <h6 class="title text-white-50">Fastest Delivery</h6>
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="service-box bg-dark border-0">
+                                                        <div class="icon">
+                                                            <img src="./assets/images/icons/service1.png" alt="Service">
+                                                        </div>
+                                                        <h6 class="title text-white-50">24x7 Care</h6>
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="service-box bg-dark border-0">
+                                                        <div class="icon">
+                                                            <img src="./assets/images/icons/service5.png" alt="Service">
+                                                        </div>
+                                                        <h6 class="title text-white-50">Best Return Policy</h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Why Choose Area  -->
+                                    <!-- Start Footer Area  -->
+                                    <footer class="axil-footer-area footer-style-2 bg-dark">
+                                        <!-- Start Footer Top Area  -->
+                                        <div class="footer-top separator-top">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <!-- Start Single Widget  -->
+                                                    <div class="col-lg-5 col-sm-5">
+                                                        <div class="axil-footer-widget">
+                                                            <h5 class="widget-title text-white-50">Contact Us</h5>
+
+                                                            <div class="inner">
+                                                                <p>No. 315, <br>
+                                                                    Hendala Road, Wattala, <br>
+                                                                    Sri Lanka.
+                                                                </p>
+                                                                <ul class="support-list-item">
+                                                                    <li><a href="mailto:contact@easy.lk"><i class="fal fa-envelope-open"></i> contact@easy.lk</a></li>
+                                                                    <li><a href="tel:(+94) 770 280 835"><i class="fal fa-phone-alt"></i> (+94) 770 280 835</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- End Single Widget  -->
+                                                    <!-- Start Single Widget  -->
+                                                    <div class="col-lg-5 col-sm-4">
+                                                        <div class="axil-footer-widget">
+                                                            <h5 class="widget-title text-white-50">Navigate To</h5>
+                                                            <div class="inner">
+                                                                <ul>
+                                                                    <li><a href="my-account.html">Profile</a></li>
+                                                                    <li><a href="cart.html">Cart</a></li>
+                                                                    <li><a href="#">Wishlist</a></li>
+                                                                    <li><a href="search.html">Shop</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- End Single Widget  -->
+                                                    <!-- Start Single Widget  -->
+                                                    <div class="col-lg-2 col-sm-3">
+                                                        <div class="axil-footer-widget">
+                                                            <h5 class="widget-title text-white-50">More Info</h5>
+                                                            <div class="inner">
+                                                                <ul>
+                                                                    <li><a href="#">Privacy Policy</a></li>
+                                                                    <li><a href="#">Terms Of Use</a></li>
+                                                                    <li><a href="#">About Us</a></li>
+                                                                    <li><a href="#">FAQ</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- End Single Widget  -->
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- End Footer Top Area  -->
+                                        <!-- Start Copyright Area  -->
+                                        <div class="copyright-area copyright-default separator-top">
+                                            <div class="container">
+                                                <div class="row align-items-center">
+                                                    <div class="col-xl-5 col-lg-12">
+                                                        <div class="copyright-right d-flex flex-wrap justify-content-xl-start  justify-content-center align-items-center">
+                                                            <span class="card-text">Powered by</span>
+                                                            <ul class="payment-icons-bottom quick-link">
+                                                                <li><img src="assets/images/icons/mastercard.png" alt="paypal cart"></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-xl-3">
+                                                        <div class="social-share justify-content-xl-start  justify-content-center">
+                                                            <a href="#"><i style="font-size: 21px;" class="fa-brands fa-twitter text-info"></i></a>
+                                                            <a href="#"><i style="color:#0ebe3e; font-size: 22px;" class="fa-brands fa-square-whatsapp"></i></a>
+                                                            <a href="#"><i style="font-size: 21px;" class="fa-brands fa-facebook-messenger text-primary"></i></a>
+                                                            <a href="#"><i style="color:#ea249c; font-size: 22px;" class="fa-brands fa-square-instagram"></i></a>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="col-xl-4 col-lg-12">
+                                                        <div class="copyright-left d-flex flex-wrap  justify-content-xl-end justify-content-center">
+                                                            <ul class="quick-link">
+                                                                <li>© 2024, All rights reserved by <a target="_blank" href="#">Minindu Dias</a>.</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- End Copyright Area  -->
+                                    </footer>
+                                    <!-- End Footer Area  -->
+
+        <!-- JS
+    ============================================ -->
+        <!-- Modernizer JS -->
+        <script src="assets/js/vendor/modernizr.min.js"></script>
+        <!-- jQuery JS -->
+        <script src="assets/js/vendor/jquery.js"></script>
+        <!-- Bootstrap JS -->
+        <script src="assets/js/vendor/popper.min.js"></script>
+        <script src="assets/js/vendor/bootstrap.min.js"></script>
+        <script src="assets/js/vendor/slick.min.js"></script>
+        <script src="assets/js/vendor/js.cookie.js"></script>
+        <!-- <script src="assets/js/vendor/jquery.style.switcher.js"></script> -->
+        <script src="assets/js/vendor/jquery-ui.min.js"></script>
+        <script src="assets/js/vendor/jquery.ui.touch-punch.min.js"></script>
+        <script src="assets/js/vendor/jquery.countdown.min.js"></script>
+        <script src="assets/js/vendor/sal.js"></script>
+        <script src="assets/js/vendor/jquery.magnific-popup.min.js"></script>
+        <script src="assets/js/vendor/imagesloaded.pkgd.min.js"></script>
+        <script src="assets/js/vendor/isotope.pkgd.min.js"></script>
+        <script src="assets/js/vendor/counterup.js"></script>
+        <script src="assets/js/vendor/waypoints.min.js"></script>
+
+        <!-- Main JS -->
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/search.js"></script>
+        <script src="assets/js/index.js"></script>
+        <script src="assets/js/notification.js"></script>
+
+        <script>
+
+        const conditionOptions = document.querySelectorAll('#condition-options li');
+        conditionOptions.forEach(option => {
+            option.addEventListener('click', function () {
+                conditionOptions.forEach(opt => opt.classList.remove('chosen'));
+                this.classList.add('chosen');
+            });
+        });
+
+        const colorOptions = document.querySelectorAll('#color-options li');
+        colorOptions.forEach(option => {
+            option.addEventListener('click', function () {
+                colorOptions.forEach(opt => opt.classList.remove('chosen'));
+                this.classList.add('chosen');
+            });
+        });
+
+       
+        </script>
+
+    </body>
+
+</html>

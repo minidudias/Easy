@@ -1,0 +1,28 @@
+.inp1::file-selector-button {
+  display: none;
+}
+
+.inp1:active{
+    box-shadow: none;
+    border-color: #7ebc12;
+    outline:none;
+    outline-width: 0;
+}
+
+.inp1{    
+    box-shadow: none;
+    outline:none;
+    outline-width: 0;
+}
+
+inp1:focus{
+    box-shadow: none;
+    outline:none;
+    outline-width: 0;
+}
+
+imp1:after{    
+    box-shadow: none;
+    outline:none;
+    outline-width: 0;
+}
